@@ -1,11 +1,14 @@
 package org.demo.birds.application;
 
 import org.demo.birds.processor.IInfiniteLoopProcessor;
+import org.demo.birds.processor.UserCommandProcessor;
 
-public class BirdStoreApplication {
+public class BirdStoreApplication
+{
 
-    public static void main(String[] args) {
-         IInfiniteLoopProcessor userCommandProcessor = null; //создать реальный объект
-         userCommandProcessor.processInLoop();
+    public static void main(String[] args)
+    {
+        IInfiniteLoopProcessor userCommandProcessor = new UserCommandProcessor();
+        userCommandProcessor.processInLoop();
     }
 }
